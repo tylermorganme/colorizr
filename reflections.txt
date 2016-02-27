@@ -1,0 +1,21 @@
+**How does your gem take advantage of Ruby’s metaprogramming capabilities?**
+- This gem reopens the string class to add in all of the new class and instance methods.
+- This gem uses class_eval to implement the `create_colors` method.
+- The `sample_colors` method uses `send` to call each of the different color methods.
+- I used `method_missing` to call `create_colors` if the color methods haven't been
+  created when someone tries to use them.
+- This gem also uses `respond_to_missing` to make sure nothing terribly goes wrong
+  due to using `method_missing`.
+
+**How long did you spend working on this project?**
+6 hours
+
+**What was the most rewarding challenge you conquered?**
+If I had to say one thing, it would be figuring out how to work method_missing.
+Honestly the whole this was a bit of a bear. I read 4 or five different articles
+to better understand what was going on so it was nice to finally have that "A ha!"
+moment when it finally made sense.
+
+**Where do you still have room to grow?**
+Still looking to learn more about software architecture. I also wish I was more
+patient with my documentation. I put a lot into it this time, but it's a struggle :)
